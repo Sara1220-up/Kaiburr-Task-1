@@ -64,12 +64,12 @@ Each Task represents a shell command that can be run, stored, and queried from a
 
 | Step                                         | Screenshot                                                                     |
 | -------------------------------------------- | ------------------------------------------------------------------------------ |
-| 1️⃣ Spring Boot Installation                 | ![Spring Boot Installation](./task_1_screenshots/springboot_insatallation.png) |
-| 2️⃣ MongoDB Connection Established           | ![MongoDB Connection](./task_1_screenshots/connectedtomongodb.png)           |
-| 3️⃣ Backend Simulation (Application Running) | ![Backend Simulation](./task_1_screenshots/Backend_simulation.png)             |
-| 4️⃣ API Testing via Postman                  | ![API Testing](./task_1_screenshots/tasks_api_testing.png)                 |
-| 5️⃣ Data Stored in MongoDB                   | ![Data Stored in Database](./task_1_screenshots/storedindatabase.png)        |
-| 6️⃣ Files Overview in Project                | ![Files Overview](./task_1_screenshots/files.png)                              |
+| 1️⃣ Spring Boot Installation                 | ![Spring Boot Installation](./task1_screenshots/springboot_insatallation.png) |
+| 2️⃣ MongoDB Connection Established           | ![MongoDB Connection](./task1_screenshots/connectedtomongodb.png)           |
+| 3️⃣ Backend Simulation (Application Running) | ![Backend Simulation](./task1_screenshots/Backend_simulation.png)             |
+| 4️⃣ API Testing via Postman                  | ![API Testing](./task1_sceenshots/tasks_api_testing.png)                 |
+| 5️⃣ Data Stored in MongoDB                   | ![Data Stored in Database](./task1_screenshots/storedindatabase.png)        |
+| 6️⃣ Files Overview in Project                | ![Files Overview](./task1_screenshots/files.png)                              |
 
 ---
 
