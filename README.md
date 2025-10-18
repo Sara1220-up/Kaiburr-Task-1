@@ -1,180 +1,120 @@
 
 
-```markdown
-# 🧩 Task 1 — Spring Boot REST API with MongoDB Integration
-
-This project implements a **Spring Boot REST API** that performs CRUD operations on tasks using **MongoDB** as the backend database.  
-It demonstrates how to connect a Spring Boot application to MongoDB, expose REST endpoints, and validate data flow through API testing.
+````markdown
+# 🧩 Kaiburr Task 1 – Java Backend and REST API Example
 
 ---
 
-## ⚙️ Objective
-
-1. Develop a RESTful web service using **Spring Boot**.  
-2. Integrate the service with **MongoDB**.  
-3. Perform CRUD operations on tasks (Create, Read, Update, Delete).  
-4. Validate API responses using **Postman / cURL** and confirm data persistence in MongoDB.
+## 🎯 Objective
+Implement a **Java Spring Boot application** that provides a REST API for managing "Task" objects.  
+Each Task represents a shell command that can be run, stored, and queried from a MongoDB database.
 
 ---
 
-## 🧰 Technologies Used
-
-| Component | Purpose |
-|------------|----------|
-| **Java 17** | Programming language |
-| **Spring Boot 3** | Framework for REST API development |
-| **Spring Web** | REST API endpoint exposure |
-| **Spring Data MongoDB** | Database integration layer |
-| **MongoDB** | NoSQL database for storage |
-| **Maven** | Build automation and dependency management |
-| **Postman / cURL** | API testing tools |
+## ⚙️ Tech Stack
+- **Language:** Java 17  
+- **Framework:** Spring Boot  
+- **Database:** MongoDB  
+- **Tools:** Postman / cURL for API testing  
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Features
 
-```
+### Endpoints Implemented
+| HTTP Method | Endpoint | Description |
+|--------------|-----------|-------------|
+| **GET** | `/tasks` | Fetch all tasks or a single task by ID |
+| **PUT** | `/tasks` | Create or update a task |
+| **DELETE** | `/tasks/{id}` | Delete a task by ID |
+| **GET** | `/tasks/find?name={name}` | Search tasks by partial name |
+| **PUT** | `/tasks/{id}/execution` | Execute a shell command and store results |
 
-Kaiburr-Task-1/
-│
-├── pom.xml
-├── src/
-│   ├── main/
-│   │   ├── java/com/kaiburr/taskmanager/
-│   │   │   ├── controller/TaskController.java
-│   │   │   ├── model/Task.java
-│   │   │   ├── repository/TaskRepository.java
-│   │   │   └── service/TaskService.java
-│   │   └── resources/
-│   │       └── application.properties
-│   └── test/
-│       └── java/com/kaiburr/taskmanager/
-├── task_1_screenshots/
-└── README.md
+---
 
+## 🧠 Data Model
+
+### Task Object
+```json
+{
+  "id": "123",
+  "name": "Print Hello",
+  "owner": "Shiva Prasad",
+  "command": "echo Hello World",
+  "taskExecutions": [
+    {
+      "startTime": "2025-01-15T10:00:00Z",
+      "endTime": "2025-01-15T10:00:02Z",
+      "output": "Hello World"
+    }
+  ]
+}
 ````
 
 ---
 
-## ⚙️ Configuration
+## 🗃️ MongoDB Configuration
 
-### MongoDB Setup
-
-1. Install and start MongoDB:
-   ```bash
-   net start MongoDB
-   mongosh
-   use kaiburrdb
-````
-
-2. Update your `application.properties`:
-
-   ```properties
-   spring.data.mongodb.database=kaiburrdb
-   spring.data.mongodb.port=27017
-   spring.data.mongodb.host=localhost
-   server.port=8080
-   ```
+* Application connects to MongoDB using connection details defined in `application.properties`.
+* Each created task is stored as a document inside MongoDB.
 
 ---
 
-## 🧩 REST Endpoints
+## 📷 Screenshots Overview
 
-| HTTP Method | Endpoint      | Description             |
-| ----------- | ------------- | ----------------------- |
-| `PUT`       | `/tasks`      | Create or update a task |
-| `GET`       | `/tasks`      | Retrieve all tasks      |
-| `GET`       | `/tasks/{id}` | Retrieve a task by ID   |
-| `DELETE`    | `/tasks/{id}` | Delete a task by ID     |
-
----
-
-## 🧠 Example cURL Commands
-
-```bash
-# Create or Update a Task
-curl -X PUT http://localhost:8080/tasks \
-  -H "Content-Type: application/json" \
-  -d '{"id":"1","name":"Print Hello","owner":"Sarayu","command":"echo Hello Kaiburr"}'
-
-# Retrieve All Tasks
-curl http://localhost:8080/tasks
-
-# Execute Task
-curl -X PUT http://localhost:8080/tasks/1/execute
-
-# Delete a Task
-curl -X DELETE http://localhost:8080/tasks/1
-```
+| Step                                         | Screenshot                                                                     |
+| -------------------------------------------- | ------------------------------------------------------------------------------ |
+| 1️⃣ Spring Boot Installation                 | ![Spring Boot Installation](./task_1_screenshots/springboot_insatallation.png) |
+| 2️⃣ MongoDB Connection Established           | ![MongoDB Connection](./task_1_screenshots/connectedtomongodb.png)           |
+| 3️⃣ Backend Simulation (Application Running) | ![Backend Simulation](./task_1_screenshots/Backend_simulation.png)             |
+| 4️⃣ API Testing via Postman                  | ![API Testing](./task_1_screenshots/tasks_api_testing.png.png)                 |
+| 5️⃣ Data Stored in MongoDB                   | ![Data Stored in Database](./task_1_screenshots/storedindatabase.png)        |
+| 6️⃣ Files Overview in Project                | ![Files Overview](./task_1_screenshots/files.png)                              |
 
 ---
 
-## 🧾 Verification & Results
-
-### ⚙️ Spring Boot Installation
-
-![Spring Boot Installation](./task_1_screenshots/springboot_insatallation.png)
-
-### 🧠 Backend Simulation
-
-![Backend Simulation](./task_1_screenshots/Backend_simulation.png)
-
-### 🧩 Connected to MongoDB
-
-![Connected to MongoDB](./task_1_screenshots/connected%20to%20mongodb.png)
-
-### 💾 Task Stored in Database
-
-![Stored in Database](./task_1_screenshots/stored%20in%20database.png)
-
-### 🧪 API Testing with Postman / cURL
-
-![Tasks API Testing](./task_1_screenshots/tasks_api_testing.png)
-
-### 🗂️ Project Files View
-
-![Files Structure](./task_1_screenshots/files.png)
-
----
-
-## 🚀 How to Run the Application
+## ✅ Execution Steps
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Sara1220-up/Kaiburr-Task-1.git
-   cd Kaiburr-Task-1
+   git clone https://github.com/<your-username>/Kaiburr-Task-1.git
    ```
-
-2. Build and run the application:
+2. Navigate to the project:
 
    ```bash
-   mvn clean install
+   cd Kaiburr-Task-1
+   ```
+3. Build and run the app:
+
+   ```bash
    mvn spring-boot:run
    ```
+4. Verify the API:
 
-3. Verify the API at:
-   👉 [http://localhost:8080/tasks](http://localhost:8080/tasks)
-
----
-
-## 🧩 Outcome
-
-✅ Successfully built and deployed a Spring Boot REST API integrated with MongoDB.
-✅ Verified data persistence between API and MongoDB.
-✅ CRUD operations validated via cURL and Postman.
+   * Open [http://localhost:8080/tasks](http://localhost:8080/tasks)
+   * Test endpoints using Postman or cURL.
 
 ---
 
-## 👩‍💻 Author
+## 📊 Output Verification
 
-**Sarayu Mandadi**
-📦 Kaiburr Internship — Task 1 Submission
-📧 GitHub: [Sara1220-up](https://github.com/Sara1220-up)
+* The API successfully creates, fetches, deletes, and executes tasks.
+* MongoDB stores each task and its execution history.
+* All requests return expected HTTP responses (200, 201, 404, etc.).
 
+---
+
+## ✅ Conclusion
+
+Task 1 successfully demonstrates:
+
+* Building REST APIs using Spring Boot
+* Integration with MongoDB
+* Command execution and persistence
+
+---
+
+
+Would you like me to also create a short **GitHub “About” description and tags** (so your Task 1 repo looks clean and professional like Task 5)?
 ```
-
-   net start MongoDB
-mongosh
-show dbs
-use kaiburrdb
