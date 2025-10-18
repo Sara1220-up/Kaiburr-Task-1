@@ -59,16 +59,16 @@ Each Task represents a shell command that can be run, stored, and queried from a
 * Each created task is stored as a document inside MongoDB.
 
 ---
-## 📷 Screenshots Overview (Raw Links)
+## 📷 Screenshots Overview
 
 | Step | Screenshot |
 |---|---|
-| 1️⃣ Spring Boot Installation | ![Spring Boot Installation](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_scrrenshots/springboot_insatallation.png) |
-| 2️⃣ MongoDB Connection Established | ![MongoDB Connection](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_scrrenshots/connected%20to%20mongodb.png) |
-| 3️⃣ Backend Simulation (Application Running) | ![Backend Simulation](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_scrrenshots/Backend_simulation.png) |
-| 4️⃣ API Testing via Postman | ![API Testing](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_scrrenshots/tasks_api_testing.png.png) |
-| 5️⃣ Data Stored in MongoDB | ![Data Stored in Database](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_scrrenshots/stored%20in%20database.png) |
-| 6️⃣ Files Overview in Project | ![Files Overview](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_scrrenshots/files.png) |
+| 1️⃣ Spring Boot Installation | ![Spring Boot Installation](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_screenshots/springboot_insatallation.png) |
+| 2️⃣ MongoDB Connection Established | ![MongoDB Connection](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_screenshots/connected%20to%20mongodb.png) |
+| 3️⃣ Backend Simulation (Application Running) | ![Backend Simulation](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_screenshots/Backend_simulation.png) |
+| 4️⃣ API Testing via Postman | ![API Testing](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_screenshots/tasks_api_testing.png.png) |
+| 5️⃣ Data Stored in MongoDB | ![Data Stored in Database](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_screenshots/stored%20in%20database.png) |
+| 6️⃣ Files Overview in Project | ![Files Overview](https://github.com/Sara1220-up/Kaiburr-Task-1/raw/main/task%201_screenshots/files.png) |
 
 
 ---
